@@ -34,13 +34,18 @@ class Perceptron(object):
 
 #from perceptron import Perceptron
 
+#from perceptron import Perceptron
+
 training_inputs = []
 training_inputs.append(np.array([1, 1]))
 training_inputs.append(np.array([1, 0]))
 training_inputs.append(np.array([0, 1]))
 training_inputs.append(np.array([0, 0]))
 
-labels = np.array([1, 0, 0, 0])
+labels = np.array([1, 1, 1, 0])# degerlerle oynadık and
+#labels = np.array([1, 0, 0, 0])# degerlerle oynadık or
+#labels = np.array([0, 1, 1, 0])# degerlerle oynadık xor
+
 
 perceptron = Perceptron(2)
 perceptron.train(training_inputs, labels)
@@ -49,7 +54,7 @@ inputs = np.array([1, 1])
 perceptron.predict(inputs) 
 #=> 1
 
-inputs = np.array([0, 1])
+inputs = np.array([1, 1])#degerlerle oynadık
 perceptron.predict(inputs) 
 
 
